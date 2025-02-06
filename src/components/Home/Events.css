@@ -1,0 +1,150 @@
+/* General styling for the Events section */
+.home-event-section {
+	background: radial-gradient(circle, rgba(62, 42, 71, 0.8), rgba(111, 66, 193, 0.8)); /* Centered gradient */
+	padding: 80px 0;
+	color: #fff;
+	position: relative;
+  }
+  
+  /* Section header */
+  .projects-header {
+	text-align: center;
+	margin-bottom: 40px;
+  }
+  
+  .section-title {
+	font-size: 3rem;
+	font-weight: 600;
+	color: #fff;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	text-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+  }
+  
+  /* Main content section */
+  .projects-body {
+	padding-bottom: 60px;
+  }
+  
+  .project-item {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 30px;
+  }
+  
+
+  .project-box {
+	background-color: rgba(0, 0, 0, 0.8); 
+	padding: 40px;
+	box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+	transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+	margin: auto;
+	max-width: 85vw;
+	height: auto;
+	text-align: center;
+	border: 3px solid transparent; 
+	position: relative; /* Fixes the disappearing border issue */
+  }
+  
+  .project-box:hover {
+	transform: translateY(-10px);
+	box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+	border: 3px solid white; /* White border on hover */
+  }
+  
+  /* Image hover effects */
+  .project-img img {
+	width: 100%;
+	border-radius: 10px;
+	transition: transform 0.3s ease, filter 0.3s ease;
+  }
+  
+  .project-img img:hover {
+	transform: scale(1.1);
+	filter: brightness(1.1);
+  }
+  
+
+  .project-box h1,
+  .project-box h2 {
+	font-size: 2rem;
+	font-weight: 700;
+	color: #fff;
+	margin-top: 20px;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	text-shadow: 0 0 10px rgba(111, 66, 193, 0.7);
+  }
+  
+
+  .project-box p {
+	font-size: 1.1rem;
+	color: #ddd;
+	margin-top: 15px;
+	line-height: 1.8;
+	text-align: justify;
+	letter-spacing: 0.5px;
+	transition: color 0.3s ease;
+  }
+  
+  .project-box:hover p {
+	color: #fff; 
+  }
+  
+
+  .slick-prev,
+  .slick-next {
+	z-index: 10;
+	color: #6f42c1;
+	font-size: 2.5rem; 
+	transition: color 0.3s ease;
+	background-color: transparent;
+	border-radius: 50%;
+  }
+  
+  .slick-prev:hover,
+  .slick-next:hover {
+	color: #fff;
+	background-color: rgba(0, 0, 0, 0.6); 
+  }
+  
+  .slick-prev {
+	left: -50px; 
+  }
+  
+  .slick-next {
+	right: -50px; 
+  }
+  
+  .slick-dots li button:before {
+	color: #6f42c1;
+	transition: color 0.3s ease;
+  }
+  
+  .slick-dots li.slick-active button:before {
+	color: #fff;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+	.project-box {
+	  padding: 30px;
+	}
+  
+	.project-box h1, .project-box h2 {
+	  font-size: 1.5rem;
+	}
+  
+	.project-box p {
+	  font-size: 1rem;
+	}
+  
+	.projects-header h1 {
+	  font-size: 2.5rem;
+	}
+  
+	.slick-prev, .slick-next {
+	  font-size: 2rem;
+	}
+  }
+  

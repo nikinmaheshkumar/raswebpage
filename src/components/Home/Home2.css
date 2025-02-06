@@ -1,0 +1,81 @@
+/* Home2 Section */
+.home-about {
+    background-color: #160424; /* Deep purple background */
+    padding: 80px 0;
+  }
+  
+  .home-about-box {
+    background-color: #2c1b44; /* Darker shade for the box */
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    color: #fff;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .home-about-box:hover {
+    transform: scale(1.02); /* Slight zoom effect on hover */
+    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.2);
+  }
+  
+  .about-title {
+    font-size: 3rem; /* Larger font for title */
+    font-weight: 600;
+  }
+  
+  .purple {
+    color: #6f42c1; /* Purple color for 'IEEE-RAS' */
+  }
+  
+  .about-subtitle {
+    font-size: 1.5rem;
+    margin-top: 10px;
+    font-weight: 500;
+    color: #ddd; /* Light gray color for the subtitle */
+  }
+  
+  .home-about-body {
+    font-size: 1.1rem; /* Slightly larger text for better readability */
+    line-height: 1.8;
+    margin-top: 20px;
+    color: #ccc; /* Lighter text for the body */
+    text-align: justify;
+  }
+  
+  @media (max-width: 768px) {
+    .home-about-box {
+      padding: 30px;
+    }
+  
+    .about-title {
+      font-size: 2.5rem;
+    }
+  
+    .about-subtitle {
+      font-size: 1.2rem;
+    }
+  
+    .home-about-body {
+      font-size: 1rem;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .home-about-box {
+      padding: 20px;
+    }
+  
+    .about-title {
+      font-size: 2rem;
+    }
+  
+    .about-subtitle {
+      font-size: 1rem;
+    }
+  
+    .home-about-body {
+      font-size: 0.95rem;
+    }
+  }
+  
