@@ -1,8 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import About from "../components/sections/About";
 import Events from "../components/sections/Events";
-import Blogs from "../components/sections/Blogs";
-import Projects from "../components/sections/Projects";
+import Blogs from "./sections/Blogs";
 import Board from "../components/sections/Board";
 import Gallery from "../components/sections/Gallery";
 import Contact from "../components/sections/Contact";
@@ -27,7 +26,6 @@ function Home({ scrollToElement }) {
       if (scrollToElement === "about") scrollTo(aboutRef);
       if (scrollToElement === "events") scrollTo(eventsRef);
       if (scrollToElement === "blogs") scrollTo(blogsRef);
-      if (scrollToElement === "projects") scrollTo(projectsRef);
       if (scrollToElement === "board") scrollTo(boardRef);
       if (scrollToElement === "gallery") scrollTo(galleryRef);
       if (scrollToElement === "contact") scrollTo(contactRef);
@@ -36,9 +34,9 @@ function Home({ scrollToElement }) {
 
   return (
     <section id="home">
-      <h1 className="text-center text-3xl text-gray-50">Home</h1>
+      <h1 className="text-center text-3xl text-gray-50 pt-25">Home</h1>
 
-      <div ref={aboutRef} id="about" style={{ marginBottom: "100px" }}>
+      <div ref={aboutRef} id="about" style={{ marginBottom: "100px", marginTop: "100px" }}>
         <About />
       </div>
 
@@ -48,10 +46,6 @@ function Home({ scrollToElement }) {
 
       <div ref={blogsRef} id="blogs" style={{ marginBottom: "100px" }}>
         <Blogs />
-      </div>
-
-      <div ref={projectsRef} id="projects" style={{ marginBottom: "100px" }}>
-        <Projects />
       </div>
 
       <div ref={boardRef} id="board" style={{ marginBottom: "100px" }}>

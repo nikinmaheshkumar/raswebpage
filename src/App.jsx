@@ -41,7 +41,6 @@ function App() {
             <Route path="/about" element={<Home scrollToElement="about" />} />
             <Route path="/event" element={<Home scrollToElement="events" />} />
             <Route path="/blog" element={<Home scrollToElement="blogs" />} />
-            <Route path="/projects" element={<Home scrollToElement="projects" />} />
             <Route path="/board" element={<Home scrollToElement="board" />} />
             <Route path="/gallery" element={<Home scrollToElement="gallery" />} />
             <Route path="/contact" element={<Home scrollToElement="contact" />} />
