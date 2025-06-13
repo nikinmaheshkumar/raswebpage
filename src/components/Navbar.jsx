@@ -62,15 +62,18 @@ export default function Navbar() {
         initial={{opacity: 1, y: 0}}
         animate={{opacity: visible ? 1 : 0, y: visible ? 0 : -100}}
         transition={{duration: 0.2}}
-        className="flex max-w-[80%] h-14 fixed top-6 inset-x-0 mx-auto border border-transparent dark:border-gray-500 rounded-full dark:bg-black bg-gray-50 shadow-md z-50 pr-2 pl-8 py-2 items-center justify-center space-x-4">
+        className="fixed top-6 inset-x-0 mx-auto max-w-[80%] rounded-full px-8 py-2 flex items-center justify-around space-x-3 bg-gray-100/15 backdrop-blur-md border border-gray-100/30 shadow-lg z-50">
         {navItems.map((item, idx) => (
           <a
             key={`link-${idx}`}
             href={item.link}
             onClick={handleClick}
-            className="flex justify-around items-stretch space-x-10 text-gray-500 dark:text-gray-50 dark:hover:text-gray-300 hover:text-gray-500">
-            <span className="block sm:hidden">{item.icon}</span>
-            <span className="hidden sm:block text-xl">{item.name}</span>
+            aria-label={`Go to ${item.link}`}
+            className="flex items-center p-2 rounded-full text-white ">
+            {item.icon}
+            <span className="hidden sm:inline-block ml-1 text-xl font-serif">
+              {item.name}
+            </span>
           </a>
         ))}
         
