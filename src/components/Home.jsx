@@ -47,7 +47,7 @@ function Home() {
   return (
     <section id="home">
       {/* Hero Section */}
-      <div className="sm:pt-28 pt-4">
+      <div className="sm:pt-28">
         <div className="flex flex-col sm:flex-row max-h-auto max-w-[90%] mx-auto sm:py-4">
 
           <div className="flex flex-col items-start justify-center py-10  sm:w-1/2">
