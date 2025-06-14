@@ -7,7 +7,7 @@ import Gallery from "../components/sections/Gallery";
 import Contact from "../components/sections/Contact";
 import "@google/model-viewer";
 import SplitText from "../components/SplitText/SplitText";
-
+import "../styles/index.css"
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -41,30 +41,28 @@ function Home() {
         );
       }
     });
+
   }, []);
 
   return (
     <section id="home">
       {/* Hero Section */}
       <div className="sm:pt-28 pt-4">
-        <div className="flex flex-col sm:flex-row max-h-auto max-w-[90%] mx-auto bg-gray-100/10 backdrop-blur-md border border-gray-100/30 shadow-md rounded-lg sm:py-4">
+        <div className="flex flex-col sm:flex-row max-h-auto max-w-[90%] mx-auto sm:py-4">
 
-          <div className="flex flex-col items-start justify-center py-10 px-6 sm:w-1/2">
-            {/* Title */}
-            <h1 className="text-md sm:text-3xl font-semibold text-gray-100 mb-4 font-[Goldman]">
-              Welcome to
-            </h1>
+          <div className="flex flex-col items-start justify-center py-10  sm:w-1/2">
 
-            {/* Main Heading with Animated Gradient Text */}
+            {/* Main Heading with Animated Gradient Text 
             <h1 className="text-2xl sm:text-5xl font-medium animate-gradient leading-tight font-[Orbitron] text-shadow-lg">
               IEEE - Robotics and <br /> Automation Society - VIT
             </h1>
-
+            */}
+            <img src="src/assets/Untitled.svg" alt="IEEE RAS Logo" className="w-[90%] sm:w-100 h-55 sm:mb-4  mix-blend-screen ml-2" />
 
             {/* Split Text or Animated Text */}
             <SplitText
               text="Here Innovation Sparks, Solutions Unfold with AI and Robotics"
-              className="text-md font-semibold text-gray-100 mt-6 leading-relaxed max-w-lg sm:text-2xl font-[Goldman]"
+              className="text-lg sm:text-md  text-gray-50/70 sm:mt-6 leading-relaxed max-w-lg sm:text-2xl electrolize-font"
               delay={200}
               duration={0.6}
               ease="power3.out"
@@ -78,15 +76,21 @@ function Home() {
           </div>
 
           {/* Model Viewer Section */}
-          <div className="flex items-center justify-center sm:w-1/2 p-6">
+          <div className="flex items-center justify-center sm:w-1/2 ">
             <model-viewer
-              src="src/models/basic_robot_arm.glb"
+            id="color"
+              src="src/models/robot_expressive.glb"
               alt="A 3D robot"
+              animation-name="Wave"
+              materials="white"
               autoplay
               // camera-controls
-              className="w-full h-55 sm:h-120 md:h-100"
+              className="w-full sm:w-[90%] h-55 sm:h-120 md:h-90"
             ></model-viewer>
+            
+
           </div>
+
         </div>
       </div>
 

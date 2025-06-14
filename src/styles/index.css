@@ -1,23 +1,18 @@
 @import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Electrolize&display=swap");
 
-.animate-gradient {
-  background: linear-gradient(270deg, #9333EA, #A855F7, #C084FC, #E0B3FF, #9333EA);
-  background-size: 1400% 1400%;
-  animation: gradientAnimation 15s ease infinite;
-
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+@font-face {
+  font-family: "Electrolize";
+  src: url("/public//Electrolize/Electrolize-Regular.ttf") format("truetype"); 
+  font-weight: normal;
+  font-style: normal;
 }
 
-@keyframes gradientAnimation {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
+:root {
+  --font-electrolize: "Electrolize", sans-serif;
+}
+
+
+.electrolize-font {
+  font-family: var(--font-electrolize);
 }

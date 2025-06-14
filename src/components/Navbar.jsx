@@ -70,7 +70,7 @@ export default function Navbar() {
             aria-label={`Go to ${item.link}`}
             className="flex items-center p-2 rounded-full text-gray-50">
             {item.icon}
-            <span className=" ml-1 font-semibold font-serif">
+            <span className=" ml-1 font-medium font-serif">
               {item.name}
             </span>
           </a>
