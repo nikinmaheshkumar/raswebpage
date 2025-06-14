@@ -12,7 +12,6 @@ import {
   Navigate,
 } from "react-router-dom";
 
-import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   const [load, upadateLoad] = useState(true);
@@ -34,16 +33,16 @@ function App() {
       
         >
           <Navbar />
-          <ScrollToTop />
+          
 
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/about" element={<Home scrollToElement="about" />} />
-            <Route path="/event" element={<Home scrollToElement="events" />} />
-            <Route path="/blog" element={<Home scrollToElement="blogs" />} />
-            <Route path="/board" element={<Home scrollToElement="board" />} />
-            <Route path="/gallery" element={<Home scrollToElement="gallery" />} />
-            <Route path="/contact" element={<Home scrollToElement="contact" />} />
+            <Route path="/about" />
+            <Route path="/event"  />
+            <Route path="/blog" />
+            <Route path="/board"  />
+            <Route path="/gallery" />
+            <Route path="/contact"  />
 
             <Route path="*" element={<Navigate to="/" />} />
           </Routes>

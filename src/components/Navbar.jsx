@@ -4,7 +4,7 @@ import React, { useState } from "react";
 
 import { motion, AnimatePresence, useScroll, useMotionValueEvent } from "framer-motion";
 
-import { Home, Bot, BarChart2, ImageIcon, BookOpen, Briefcase, Users, MessageSquare } from "lucide-react";
+import { Home, Bot, BarChart2, ImageIcon, BookOpen, Users, MessageSquare } from "lucide-react";
 
 export default function Navbar() {
   const navItems = [
@@ -37,18 +37,20 @@ export default function Navbar() {
   });
 
   const handleClick = (e) => {
-    const href = e.currentTarget.getAttribute("href");
+  e.preventDefault();
+  const href = e.currentTarget.getAttribute("href");
 
-    if (href?.startsWith("#")) {
-      e.preventDefault();
-      const targetId = href.substring(1);
-      const element = document.getElementById(targetId);
+  if (href?.startsWith("#")) {
+    const targetId = href.substring(1);
+    const element = document.getElementById(targetId);
 
-      if (element) {
-        element.scrollIntoView({ behavior: "smooth" });
-      }
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth", block: "start" });
     }
-  };
+  }
+};
+
+
 
   return (
     <AnimatePresence mode="wait">
