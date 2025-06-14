@@ -27,7 +27,6 @@ export default function Navbar() {
       if (scrollYProgress.get() < 0.05) {
         setVisible(true);
       } else {
-
         if (direction < 0) {
           setVisible(true);
         } else {
@@ -36,6 +35,7 @@ export default function Navbar() {
       }
     }
   });
+
   const handleClick = (e) => {
     const href = e.currentTarget.getAttribute("href");
 
@@ -57,7 +57,7 @@ export default function Navbar() {
         initial={{opacity: 1, y: 0}}
         animate={{opacity: visible ? 1 : 0, y: visible ? 0 : -100}}
         transition={{duration: 0.2}}
-        className="hidden sm:flex fixed top-6 inset-x-0 px-8 py-2 rounded-full lg:max-w-[80%] md:max-w-[90%] ml-auto mr-auto 
+        className="hidden lg:flex fixed top-6 inset-x-0 px-8 py-2 rounded-full max-w-[80%] ml-auto mr-auto 
                     items-center justify-around space-x-3 
                     bg-gray-100/15 backdrop-blur-md border border-gray-100/30 shadow-md z-50">
         {navItems.map((item, idx) => (
@@ -75,12 +75,32 @@ export default function Navbar() {
         ))}
       </motion.div>
 
+      {/* Top Navbar for Tablet */}
+      <motion.div
+        initial={{opacity: 1, y: 0}}
+        animate={{opacity: visible ? 1 : 0, y: visible ? 0 : -100}}
+        transition={{duration: 0.2}}
+        className="hidden md:flex lg:hidden fixed top-6 inset-x-0 px-4 py-1 rounded-full max-w-[90%] ml-auto mr-auto 
+              items-center justify-around gap-2
+              bg-gray-100/15 backdrop-blur-md border border-gray-100/30 shadow-md z-50">
+        {navItems.map((item, idx) => (
+          <a
+            key={item.link}
+            href={item.link}
+            onClick={handleClick}
+            aria-label={`Go to ${item.link}`}
+            className="flex px-1 py-1 rounded-full text-gray-50 font-semibold font-serif">
+            {item.name}
+          </a>
+        ))}
+      </motion.div>
+
       {/* Bottom Navbar for Mobile */}
       <motion.div
         initial={{opacity: 1, y: 100}}
         animate={{opacity: visible ? 1 : 0, y: visible ? 0 : 100}}
         transition={{duration: 0.2}}
-        className="flex sm:hidden fixed bottom-4 inset-x-0 px-4 py-2 rounded-2xl max-w-md ml-auto mr-auto 
+        className="flex sm:hidden fixed bottom-4 inset-x-0 px-2 py-2 rounded-2xl max-w-[98%] ml-auto mr-auto 
                     items-center justify-around space-x-2 
                     bg-gray-100/15 backdrop-blur-md border border-gray-100/30 shadow-md z-50">
         {navItems.map((item, idx) => (
@@ -91,10 +111,6 @@ export default function Navbar() {
             aria-label={`Go to ${item.link}`}
             className="flex flex-col items-center p-2 rounded-full text-gray-50">
             {item.icon}
-            {/* 
-            <span className="text-xs mt-1 font-semibold">
-              {item.name}
-            </span>*/}
           </a>
         ))}
       </motion.div>
