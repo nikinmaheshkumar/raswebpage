@@ -20,103 +20,237 @@ function Home() {
   const boardRef = useRef(null);
   const galleryRef = useRef(null);
   const contactRef = useRef(null);
+  const heroRef = useRef(null);
+  const particlesRef = useRef(null);
 
-  // Animate on scroll
+  // Enhanced scroll animations
   useEffect(() => {
-    [aboutRef, eventsRef, blogsRef, boardRef, galleryRef, contactRef].forEach((ref) => {
+    // Hero entrance animation
+    if (heroRef.current) {
+      gsap.fromTo(
+        heroRef.current.children,
+        { opacity: 0, y: 80, scale: 0.9 },
+        {
+          opacity: 1,
+          y: 0,
+          scale: 1,
+          duration: 1.2,
+          ease: "power3.out",
+          stagger: 0.3,
+          delay: 0.5
+        }
+      );
+    }
+
+    // Floating animation for particles
+    if (particlesRef.current) {
+      gsap.to(particlesRef.current.children, {
+        y: -20,
+        duration: 3,
+        ease: "power2.inOut",
+        stagger: 0.5,
+        repeat: -1,
+        yoyo: true
+      });
+    }
+
+    // Section animations with improved triggers
+    [aboutRef, eventsRef, blogsRef, boardRef, galleryRef, contactRef].forEach((ref, index) => {
       if (ref.current) {
         gsap.fromTo(
           ref.current,
-          { opacity: 0, y: 100 },
+          { 
+            opacity: 0, 
+            y: 120,
+            scale: 0.95,
+            rotationX: 10
+          },
           {
             opacity: 1,
             y: 0,
+            scale: 1,
+            rotationX: 0,
+            duration: 1.5,
             ease: "power3.out",
             scrollTrigger: {
               trigger: ref.current,
-              start: "top 70%", // when section reaches 80% from the top
+              start: "top 75%",
+              end: "top 25%",
               toggleActions: "play none none reverse",
+              scrub: false,
             },
           }
         );
       }
     });
 
+    // Parallax effect for background elements
+    gsap.to(".parallax-bg", {
+      yPercent: -50,
+      ease: "none",
+      scrollTrigger: {
+        trigger: ".parallax-bg",
+        start: "top bottom",
+        end: "bottom top",
+        scrub: true
+      }
+    });
+
   }, []);
 
   return (
-    <section id="home">
+    <section id="home" className="relative overflow-hidden">
+      {/* Animated Background */}
+      <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 via-blue-900/20 to-indigo-900/20 parallax-bg"></div>
+      
+      {/* Floating Particles */}
+      <div ref={particlesRef} className="absolute inset-0 pointer-events-none">
+        <div className="absolute top-20 left-10 w-3 h-3 bg-purple-400/30 rounded-full blur-sm"></div>
+        <div className="absolute top-40 right-20 w-2 h-2 bg-blue-400/40 rounded-full blur-sm"></div>
+        <div className="absolute top-60 left-1/4 w-4 h-4 bg-indigo-400/20 rounded-full blur-sm"></div>
+        <div className="absolute bottom-40 right-10 w-3 h-3 bg-cyan-400/30 rounded-full blur-sm"></div>
+        <div className="absolute bottom-60 left-20 w-2 h-2 bg-purple-400/40 rounded-full blur-sm"></div>
+      </div>
+
       {/* Hero Section */}
-      <div className="sm:pt-28">
-        <div className="flex flex-col sm:flex-row max-h-auto max-w-[90%] mx-auto sm:py-4">
-
-          <div className="flex flex-col items-start justify-center py-10  sm:w-1/2">
-
-            {/* Main Heading with Animated Gradient Text 
-            <h1 className="text-2xl sm:text-5xl font-medium animate-gradient leading-tight font-[Orbitron] text-shadow-lg">
-              IEEE - Robotics and <br /> Automation Society - VIT
-            </h1>
-            */}
-            <img src="src/assets/Untitled.svg" alt="IEEE RAS Logo" className="w-[90%] sm:w-100 h-55 sm:mb-4  mix-blend-screen ml-2" />
-
-            {/* Split Text or Animated Text */}
-            <SplitText
-              text="Here Innovation Sparks, Solutions Unfold with AI and Robotics"
-              className="text-lg sm:text-md  text-gray-50/70 sm:mt-6 leading-relaxed max-w-lg sm:text-2xl electrolize-font"
-              delay={200}
-              duration={0.6}
-              ease="power3.out"
-              splitType="words"
-              from={{ opacity: 0, y: 40 }}
-              to={{ opacity: 1, y: 0 }}
-              threshold={0.1}
-              rootMargin="-100px"
-              textAlign="left"
-            />
-          </div>
-
-          {/* Model Viewer Section */}
-          <div className="flex items-center justify-center sm:w-1/2 ">
-            <model-viewer
-            id="color"
-              src="src/models/robot_expressive.glb"
-              alt="A 3D robot"
-              animation-name="Wave"
-              materials="white"
-              autoplay
-              // camera-controls
-              className="w-full sm:w-[90%] h-55 sm:h-120 md:h-90"
-            ></model-viewer>
+      <div className="relative z-10 sm:pt-8 pt-20">
+        <div ref={heroRef} className="flex flex-col lg:flex-row max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-8 lg:py-16">
+          
+          {/* Content Section */}
+          <div className="flex flex-col justify-center lg:w-1/2 space-y-8 lg:pr-12">
             
+            {/* Logo Section with Glow Effect */}
+            <div className="relative group">
+              <div className="absolute -inset-4 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg blur-xl opacity-20 group-hover:opacity-30 transition-opacity duration-500"></div>
+              <img 
+                src="src/assets/Untitled.svg" 
+                alt="IEEE RAS Logo" 
+                className="relative w-80 sm:w-96 h-auto mix-blend-screen filter drop-shadow-2xl transform hover:scale-105 transition-all duration-500" 
+              />
+            </div>
 
+            {/* Enhanced Split Text */}
+            <div className="relative">
+              <div className="absolute -inset-2 bg-gradient-to-r from-purple-600/10 to-blue-600/10 rounded-lg blur-sm"></div>
+              <SplitText
+                text="Here Innovation Sparks, Solutions Unfold with AI and Robotics"
+                className="relative text-xl sm:text-2xl lg:text-3xl text-gray-50/90 leading-relaxed max-w-2xl electrolize-font font-light tracking-wide"
+                delay={800}
+                duration={0.8}
+                ease="power3.out"
+                splitType="words"
+                from={{ opacity: 0, y: 50, rotationX: 90 }}
+                to={{ opacity: 1, y: 0, rotationX: 0 }}
+                threshold={0.1}
+                rootMargin="-100px"
+                textAlign="left"
+              />
+            </div>
+
+            {/* Call to Action Buttons */}
+            <div className="flex flex-col sm:flex-row gap-4 pt-6">
+              <button className=" mx-auto group relative overflow-hidden bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/25">
+                <span className="relative z-10">Explore Projects</span>
+                <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              </button>
+              
+            </div>
           </div>
 
+          {/* Model Viewer Section - Simplified */}
+          <div className="flex items-center justify-center lg:w-1/2 mt-12 lg:mt-0">
+            <div className="relative">
+              {/* Glowing background */}
+              
+              
+              {/* Model container */}
+              
+                <model-viewer
+                  src="src/models/robot_playground.glb"
+                  alt="IEEE RAS Robot"
+                  // auto-rotate
+                  // camera-controls
+                  autoplay
+                  animation-name="Wave"
+                  shadow-intensity="1"
+                  className="w-full h-96 md:h-[500px]"
+                  style={{ width: "500px", height: "500px", background: "transparent" }}>
+                </model-viewer>
+              
+            </div>
+          </div>
         </div>
+
+
       </div>
 
-      {/* Sections with spacing */}
-      <div ref={aboutRef} id="about" className="scroll-mt-[100px] mt-20">
-        <About />
-      </div>
+      {/* Enhanced Sections with improved spacing and animations */}
+      <div className="relative z-10 space-y-32">
+        <div ref={aboutRef} id="about" className="scroll-mt-[100px]">
+          <div className="max-w-7xl mx-auto px-6">
+            <div className="relative">
+              <div className="absolute -inset-4 bg-gradient-to-r from-purple-600/10 to-blue-600/10 rounded-3xl blur-xl"></div>
+              <div className="relative bg-gray-900/30 backdrop-blur-sm rounded-3xl p-8 border border-gray-700/30">
+                <About />
+              </div>
+            </div>
+          </div>
+        </div>
 
-      <div ref={eventsRef} id="events" className="scroll-mt-[100px] mt-20">
-        <Events />
-      </div>
+        <div ref={eventsRef} id="events" className="scroll-mt-[100px]">
+          <div className="max-w-7xl mx-auto px-6">
+            <div className="relative">
+              <div className="absolute -inset-4 bg-gradient-to-r from-blue-600/10 to-indigo-600/10 rounded-3xl blur-xl"></div>
+              <div className="relative bg-gray-900/30 backdrop-blur-sm rounded-3xl p-8 border border-gray-700/30">
+                <Events />
+              </div>
+            </div>
+          </div>
+        </div>
 
-      <div ref={galleryRef} id="gallery" className="scroll-mt-[100px] mt-20">
-        <Gallery />
-      </div>
+        <div ref={galleryRef} id="gallery" className="scroll-mt-[100px]">
+          <div className="max-w-7xl mx-auto px-6">
+            <div className="relative">
+              <div className="absolute -inset-4 bg-gradient-to-r from-indigo-600/10 to-purple-600/10 rounded-3xl blur-xl"></div>
+              <div className="relative bg-gray-900/30 backdrop-blur-sm rounded-3xl p-8 border border-gray-700/30">
+                <Gallery />
+              </div>
+            </div>
+          </div>
+        </div>
 
-      <div ref={blogsRef} id="blog" className="scroll-mt-[100px] mt-20">
-        <Blogs />
-      </div>
+        <div ref={blogsRef} id="blog" className="scroll-mt-[100px]">
+          <div className="max-w-7xl mx-auto px-6">
+            <div className="relative">
+              <div className="absolute -inset-4 bg-gradient-to-r from-purple-600/10 to-cyan-600/10 rounded-3xl blur-xl"></div>
+              <div className="relative bg-gray-900/30 backdrop-blur-sm rounded-3xl p-8 border border-gray-700/30">
+                <Blogs />
+              </div>
+            </div>
+          </div>
+        </div>
 
-      <div ref={boardRef} id="board" className="scroll-mt-[100px] mt-20">
-        <Board />
-      </div>
+        <div ref={boardRef} id="board" className="scroll-mt-[100px]">
+          <div className="max-w-7xl mx-auto px-6">
+            <div className="relative">
+              <div className="absolute -inset-4 bg-gradient-to-r from-cyan-600/10 to-blue-600/10 rounded-3xl blur-xl"></div>
+              <div className="relative bg-gray-900/30 backdrop-blur-sm rounded-3xl p-8 border border-gray-700/30">
+                <Board />
+              </div>
+            </div>
+          </div>
+        </div>
 
-      <div ref={contactRef} id="contact" className="scroll-mt-[100px] mt-20">
-        <Contact />
+        <div ref={contactRef} id="contact" className="scroll-mt-[100px] pb-20">
+          <div className="max-w-7xl mx-auto px-6">
+            <div className="relative">
+              <div className="absolute -inset-4 bg-gradient-to-r from-blue-600/10 to-purple-600/10 rounded-3xl blur-xl"></div>
+              <div className="relative bg-gray-900/30 backdrop-blur-sm rounded-3xl p-8 border border-gray-700/30">
+                <Contact />
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );
