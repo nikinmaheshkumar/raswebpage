@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import Preloader from "./components/Preloader";
 import Navbar from "./components/Navbar";
 import Home from "./components/Home";
-import Footer from "./components/Footer";
+
 
 import {
   BrowserRouter as Router,
@@ -47,7 +47,6 @@ function App() {
             <Route path="*" element={<Navigate to="/" />} />
           </Routes>
 
-          <Footer />
         </div>
       )}
 

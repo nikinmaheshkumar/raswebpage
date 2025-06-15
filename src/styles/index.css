@@ -16,3 +16,11 @@
 .electrolize-font {
   font-family: var(--font-electrolize);
 }
+.home-section {
+  position: relative;
+  background-image: linear-gradient(to right bottom, #13121b, #13101d, #130e1f, #130b21, #140822, #170d28, #1a102f, #1e1236, #251944, #2c2053, #332863, #393073);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+}
