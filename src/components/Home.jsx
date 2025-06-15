@@ -200,8 +200,8 @@ function Home() {
         <div ref={aboutRef} id="about" className="scroll-mt-[100px]">
           <div className="max-w-7xl mx-auto px-6">
             <div className="relative">
-              <div className="absolute -inset-4 bg-gradient-to-r from-purple-600/10 to-blue-600/10 rounded-3xl blur-xl"></div>
-              <div className="relative bg-gray-900/30 backdrop-blur-sm rounded-3xl p-8 border border-gray-700/30">
+              <div className="absolute -inset-4 "></div>
+              <div className="relative  backdrop-blur-sm rounded-3xl p-8 ">
                 <About />
               </div>
             </div>
