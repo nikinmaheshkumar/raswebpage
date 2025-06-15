@@ -55,9 +55,10 @@ export const CardSpotlight = ({
             animationSpeed={5}
             containerClassName="bg-transparent absolute inset-0 pointer-events-none"
             colors={[
-              [59, 130, 246],
-              [139, 92, 246],
+              [37, 99, 235],   // blue-600 (#2563EB)
+              [99, 102, 241],  // indigo-500 (#6366F1)
             ]}
+
             dotSize={3} />
         )}
       </motion.div>
