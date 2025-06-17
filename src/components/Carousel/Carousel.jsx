@@ -1,44 +1,27 @@
 import { useEffect, useState, useRef } from "react";
 import { motion, useMotionValue, useTransform } from "framer-motion";
 // replace icons with your own if needed
-import {
-  FiCircle,
-  FiCode,
-  FiFileText,
-  FiLayers,
-  FiLayout,
-} from "react-icons/fi";
+import Reboot from "../../assets/reboot.svg";
+import Roboescape from "../../assets/roboescape.svg";
 
 const DEFAULT_ITEMS = [
   {
-    title: "Text Animations",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque venenatis sem sit amet mollis aliquam. Suspendisse eget lorem in urna volutpat dapibus. Aliquam leo turpis, facilisis pretium fermentum in, sagittis a ante. Nullam lacus orci, rhoncus sed sem vel, feugiat porta velit. Suspendisse sed quam varius, tristique purus vitae, interdum sem. Nulla feugiat nibh efficitur tellus eleifend, ut lobortis diam eleifend. Phasellus turpis dolor, tempor vitae aliquam nec, scelerisque at dui. Quisque tempor lorem ante, ut molestie sapien venenatis a. Donec et iaculis justo, eu rhoncus arcu. Aenean vitae odio in mauris condimentum posuere id et ante. Maecenas tristique felis felis, ut aliquet tellus porta at. In hac habitasse platea dictumst. Mauris porttitor suscipit sem. Pellentesque sed libero pretium, aliquet felis sed, vehicula mi. Phasellus pulvinar, risus et volutpat egestas, libero sem blandit ipsum, in scelerisque tellus felis sit amet enim. Praesent lectus mi, molestie vel tellus non, gravida luctus nunc.Vivamus id dapibus arcu, a gravida lorem. Pellentesque lacinia, eros tincidunt consequat pretium, nunc magna efficitur enim, sed hendrerit tellus arcu at orci. Donec at scelerisque velit, eu congue tortor. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Maecenas viverra gravida felis id dictum. Curabitur vitae massa vel magna faucibus auctor.Sed in ligula sed enim eleifend tincidunt. Donec id felis a augue finibus facilisis. Maecenas nec dolor ac leo sodales fringilla. Sed euismod, est vel convallis aliquet, enim erat facilisis quam, at efficitur ex justo in nunc. Suspendisse potenti. In hac habitasse platea dictumst. Nullam non libero sed odio commodo tincidunt. Aenean id ligula nec nisi semper lacinia. Sed et dui a enim congue faucibus.",
+    title: "Reboot 3.0",
+    description: "The sequel to our annual hackathon, REBOOT 3.0, presents an intensive 36-hour event where participants immerse themselves in continuous collaboration. Throughout the hackathon, attendees will be treated to enlightening presentations by esteemed speakers, providing valuable insights. To add excitement and foster creativity, engaging contests will be interspersed, offering a refreshing break from the intense work sessions. The pinnacle of the event will be the evaluation of projects by a panel of distinguished experts, each renowned in their respective fields. Their discerning judgment will culminate in the recognition of the three most innovative ideas conceived from scratch during the hackathon.REBOOT 3.0 promises to be an unparalleled experience, combining relentless innovation, intellectual discourse, and spirited competition to inspire and propel participants towards groundbreaking solutions.",
     id: 1,
-    icon: <FiFileText className="h-[16px] w-[16px] text-white" />,
+    src: Reboot,
   },
   {
-    title: "Animations",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque venenatis sem sit amet mollis aliquam. Suspendisse eget lorem in urna volutpat dapibus. Aliquam leo turpis, facilisis pretium fermentum in, sagittis a ante. Nullam lacus orci, rhoncus sed sem vel, feugiat porta velit. Suspendisse sed quam varius, tristique purus vitae, interdum sem. Nulla feugiat nibh efficitur tellus eleifend, ut lobortis diam eleifend. Phasellus turpis dolor, tempor vitae aliquam nec, scelerisque at dui. Quisque tempor lorem ante, ut molestie sapien venenatis a. Donec et iaculis justo, eu rhoncus arcu. Aenean vitae odio in mauris condimentum posuere id et ante. Maecenas tristique felis felis, ut aliquet tellus porta at. In hac habitasse platea dictumst. Mauris porttitor suscipit sem. Pellentesque sed libero pretium, aliquet felis sed, vehicula mi. Phasellus pulvinar, risus et volutpat egestas, libero sem blandit ipsum, in scelerisque tellus felis sit amet enim. Praesent lectus mi, molestie vel tellus non, gravida luctus nunc.Vivamus id dapibus arcu, a gravida lorem. Pellentesque lacinia, eros tincidunt consequat pretium, nunc magna efficitur enim, sed hendrerit tellus arcu at orci. Donec at scelerisque velit, eu congue tortor. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Maecenas viverra gravida felis id dictum. Curabitur vitae massa vel magna faucibus auctor.Sed in ligula sed enim eleifend tincidunt. Donec id felis a augue finibus facilisis. Maecenas nec dolor ac leo sodales fringilla. Sed euismod, est vel convallis aliquet, enim erat facilisis quam, at efficitur ex justo in nunc. Suspendisse potenti. In hac habitasse platea dictumst. Nullam non libero sed odio commodo tincidunt. Aenean id ligula nec nisi semper lacinia. Sed et dui a enim congue faucibus.",
+    title: "Roboescape",
+    description: "Participants immersed themselves in the world of Roboescape, where every moment was filled with excitement. They faced challenging puzzles and mysterious riddles, each one leading to the next level of fun. As they delved deeper, the puzzles became even more intriguing, keeping them engaged and eager for more.Amidst the thrill of the game, participants remained vigilant, ready for any surprises that might come their way. Winners were celebrated with exciting prizes, adding to the excitement of the event.Roboescape offers an extraordinary adventure, seamlessly blending limitless innovation with cherished moments shared among friends and the triumphs over challenges.",
     id: 2,
-    icon: <FiCircle className="h-[16px] w-[16px] text-white" />,
+    src: Roboescape,
   },
   {
-    title: "Components",
-    description: "Reusable components for your projects.",
+    title: "Roboverse",
+    description: "Participants immersed themselves in the dynamic world of Roboverse, where every moment sparked creativity and innovation. They tackled thought-provoking challenges and brainstorming sessions, each unlocking new avenues of ideas and solutions. As they delved deeper into the ideathon, the problems presented grew more stimulating, fueling their curiosity and pushing their creative boundaries. Guided by mentors and driven by a shared vision, participants explored diverse perspectives, crafting ideas that had the potential to make a real-world impact. Amidst the excitement of collaborative ideation, participants remained focused, ready to pivot and adapt to new insights. Teams worked tirelessly, blending technical expertise with imaginative thinking, transforming raw concepts into actionable plans. Winning teams were celebrated with prestigious accolades, recognizing their innovative solutions and teamwork. Roboverse offers an extraordinary platform, seamlessly blending limitless imagination with moments of camaraderie, the joy of overcoming challenges, and the pride of creating meaningful change. It’s more than an ideathon; it’s a launchpad for visionaries to shape the future.",
     id: 3,
-    icon: <FiLayers className="h-[16px] w-[16px] text-white" />,
-  },
-  {
-    title: "Backgrounds",
-    description: "Beautiful backgrounds and patterns for your projects.",
-    id: 4,
-    icon: <FiLayout className="h-[16px] w-[16px] text-white" />,
-  },
-  {
-    title: "Common UI",
-    description: "Common UI components are coming soon!",
-    id: 5,
-    icon: <FiCode className="h-[16px] w-[16px] text-white" />,
+    src: "https://via.placeholder.com/300x200.png?text=Components",
   },
 ];
 
@@ -148,8 +131,8 @@ export default function Carousel({
     <div
       ref={containerRef}
       className={`relative overflow-hidden p-4 ${round
-          ? "rounded-full shadow-lg  "
-          : "rounded-[24px] shadow-lg "
+        ? "rounded-full "
+        : "rounded-[24px] "
         }`}
       style={{
         width: `${baseWidth}px`,
@@ -185,8 +168,8 @@ export default function Carousel({
             <motion.div
               key={index}
               className={`relative shrink-0 flex flex-col ${round
-                  ? "items-center justify-center text-center bg-white/10 border-0"
-                  : "items-start justify-between bg-white/10 border border-[#222] rounded-[12px]"
+                ? "items-center justify-center text-center bg-white/10 border-0"
+                : "items-start justify-between bg-white/10 border border-[#222] rounded-[12px]"
                 } overflow-hidden cursor-grab active:cursor-grabbing`}
               style={{
                 width: itemWidth,
@@ -196,16 +179,19 @@ export default function Carousel({
               }}
               transition={effectiveTransition}
             >
-              <div className={`${round ? "p-0 m-0" : "mb-4 p-5"}`}>
-                <span className="flex h-[28px] w-[28px] items-center justify-center rounded-full bg-[#060010]">
-                  {item.icon}
-                </span>
+              <div className={`${round ? "mx-auto pt-2" : "mx-auto pt-2"}`}>
+                <img
+                    src={item.src}
+                    alt={item.title}
+                    className="img-fluid mx-auto"
+                    style={{ maxHeight: "200px" }}
+                  />
               </div>
               <div className="p-5">
-                <div className="mb-1 font-black text-lg text-white">
+                <div className="mb-1 font-black text-lg text-white text-center">
                   {item.title}
                 </div>
-                <p className="text-sm text-white">{item.description}</p>
+                <p className="text-sm text-white text-pretty mb-2">{item.description}</p>
               </div>
             </motion.div>
           );
@@ -220,12 +206,12 @@ export default function Carousel({
             <motion.div
               key={index}
               className={`h-2 w-2 rounded-full cursor-pointer transform transition-all duration-500 ease-in-out ${currentIndex % items.length === index
-                  ? round
-                    ? "bg-purple-500 scale-125 shadow-purple-500/50 shadow-md"
-                    : "bg-purple-500 shadow-purple-500/50 shadow-md"
-                  : round
-                    ? "bg-purple-300/30"
-                    : "bg-gray-500/30"
+                ? round
+                  ? "bg-purple-500 scale-125 shadow-purple-500/50 shadow-md"
+                  : "bg-purple-500 shadow-purple-500/50 shadow-md"
+                : round
+                  ? "bg-purple-300/30"
+                  : "bg-gray-500/30"
                 }`}
 
               animate={{

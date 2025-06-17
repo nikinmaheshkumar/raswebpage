@@ -8,8 +8,8 @@ function Events() {
   useEffect(() => {
     // Update baseWidth and baseHeight when window resizes
     function handleResize() {
-      setWidth(window.innerWidth * 0.8);
-      setHeight(window.innerHeight * 0.6);
+      setWidth(window.innerWidth * 0.9);
+      setHeight(window.innerHeight * 0.8);
     }
 
     handleResize();
@@ -22,11 +22,14 @@ function Events() {
     <>
       <div
         style={{ height: `${height}px`, position: "relative" }}
-        className="flex justify-center items-center mt-120 sm:mt-0 mb-120 sm:mb-0">
+        className="flex justify-center items-center flex-col">
+          <h1 className="text-3xl sm:text-5xl text-white font-bold mb-6">
+            Events
+          </h1>
         <Carousel
           baseWidth={width}
           autoplay={true}
-          autoplayDelay={3000}
+          autoplayDelay={4000}
           pauseOnHover={true}
           loop={true}
           round={false}

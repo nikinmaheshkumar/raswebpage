@@ -5,7 +5,7 @@ import { Users, Activity, Award } from "lucide-react";
 function About() {
   return (
     <>
-      <h1 className="text-4xl font-semibold text-center mt-12 mb-8 text-white">
+      <h1 className="text-5xl font-semibold text-center mt-12 mb-8 text-white">
         About Us 
       </h1>
       <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
