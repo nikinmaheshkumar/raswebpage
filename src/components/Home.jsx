@@ -102,7 +102,7 @@ function Home() {
   }, []);
 
   return (
-    <section id="home" className="home-section relative overflow-hidden">
+    <section id="home" className="home-section relative">
       {/* Floating Particles */}
       <div ref={particlesRef} className="absolute inset-0 pointer-events-none">
         <div className="absolute top-20 left-10 w-3 h-3 bg-purple-400/30 rounded-full blur-sm"></div>

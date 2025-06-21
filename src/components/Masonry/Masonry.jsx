@@ -12,7 +12,7 @@ const useMedia = (queries, values, defaultValue) => {
     queries.forEach((q) => matchMedia(q).addEventListener("change", handler));
     return () =>
       queries.forEach((q) =>
-        matchMedia(q).removeEventListener("change", handler),
+        matchMedia(q).removeEventListener("change", handler)
       );
   }, [queries]);
 
@@ -44,8 +44,8 @@ const preloadImages = async (urls) => {
           const img = new Image();
           img.src = src;
           img.onload = img.onerror = () => resolve();
-        }),
-    ),
+        })
+    )
   );
 };
 
@@ -59,7 +59,7 @@ const Masonry = ({
   hoverScale = 0.95,
   blurToFocus = true,
   colorShiftOnHover = false,
-  gap = 16, // NEW: gap between items
+  gap = 16,
 }) => {
   const columns = useMedia(
     [
@@ -69,11 +69,14 @@ const Masonry = ({
       "(min-width:400px)",
     ],
     [5, 4, 3, 2],
-    1,
+    1
   );
 
   const [containerRef, { width }] = useMeasure();
   const [imagesReady, setImagesReady] = useState(false);
+  const [grid, setGrid] = useState([]);
+  const [gridHeight, setGridHeight] = useState(0);
+  const hasMounted = useRef(false);
 
   const getInitialPosition = (item) => {
     const containerRect = containerRef.current?.getBoundingClientRect();
@@ -108,8 +111,8 @@ const Masonry = ({
     preloadImages(items.map((i) => i.img)).then(() => setImagesReady(true));
   }, [items]);
 
-  const grid = useMemo(() => {
-    if (!width) return [];
+  useEffect(() => {
+    if (!width) return;
 
     const smallScreen = columns === 1;
     const visibleItems = smallScreen ? items.slice(0, 6) : items;
@@ -117,7 +120,7 @@ const Masonry = ({
     const colHeights = new Array(columns).fill(0);
     const columnWidth = (width - gap * (columns - 1)) / columns;
 
-    return visibleItems.map((child) => {
+    const computedGrid = visibleItems.map((child) => {
       const col = colHeights.indexOf(Math.min(...colHeights));
       const x = col * (columnWidth + gap);
       const itemWidth = child.width ?? columnWidth;
@@ -128,10 +131,10 @@ const Masonry = ({
 
       return { ...child, x, y, w: itemWidth, h: height };
     });
+
+    setGrid(computedGrid);
+    setGridHeight(Math.max(...colHeights));
   }, [columns, items, width, gap]);
-
-
-  const hasMounted = useRef(false);
 
   useLayoutEffect(() => {
     if (!imagesReady) return;
@@ -159,7 +162,7 @@ const Masonry = ({
             duration: 0.8,
             ease: "power3.out",
             delay: index * stagger,
-          },
+          }
         );
       } else {
         gsap.to(selector, {
@@ -203,7 +206,11 @@ const Masonry = ({
   };
 
   return (
-    <div ref={containerRef} className="relative w-full h-full" style={{ padding: gap / 2 }}>
+    <div
+      ref={containerRef}
+      className="relative w-full"
+      style={{ padding: gap / 2, height: gridHeight }}
+    >
       {grid.map((item) => (
         <div
           key={item.id}
@@ -222,7 +229,6 @@ const Masonry = ({
             )}
           </div>
         </div>
-
       ))}
     </div>
   );

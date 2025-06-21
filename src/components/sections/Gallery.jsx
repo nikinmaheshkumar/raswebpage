@@ -56,8 +56,8 @@ function Gallery() {
   return (
     <>
       <div className="flex flex-col items-center mt-10">
-        <h2 className="text-3xl font-semibold text-gray-100 mb-5">
-          Gallery Section
+        <h2 className="text-4xl sm:text-5xl font-semibold text-gray-100 mb-5">
+          Gallery
         </h2>
         <Masonry
           items={items}
