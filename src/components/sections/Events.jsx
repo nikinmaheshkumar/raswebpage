@@ -51,7 +51,7 @@ function Events() {
 
   return (
     <div className="w-full max-w-screen-xl mx-auto px-2 py-3">
-      <h1 className="text-4xl sm:text-5xl font-semibold text-center mt-12 mb-8 text-white">
+      <h1 className="text-4xl sm:text-5xl font-semibold text-center mt-6 mb-8 text-white">
         Events
       </h1>
 

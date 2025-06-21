@@ -28,7 +28,8 @@ function App() {
     <Router>
       {load ? <Preloader /> : (
         <div
-          className='min-h-screen bg-[linear-gradient(to_right_bottom,#13121b,#13101d,#130e1f,#130b21,#140822,#170d28,#1a102f,#1e1236,#251944,#2c2053,#332863,#393073)]'
+          className='min-h-screen bg-gradient-to-br from-[#13121b] via-[#1e1236] to-[#393073]
+'
           id="scroll"
       
         >

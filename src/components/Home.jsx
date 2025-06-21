@@ -113,7 +113,7 @@ function Home() {
       </div>
 
       {/* Hero Section */}
-      <div className="relative z-10 sm:pt-8 pt-20">
+      <div className="relative z-10 pt-20">
         <div ref={heroRef} className="flex flex-col lg:flex-row max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-8 lg:py-16">
           {/* Left Section */}
           <div className="flex flex-col justify-center lg:w-1/2 space-y-8 lg:pr-12">

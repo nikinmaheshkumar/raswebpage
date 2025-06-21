@@ -109,27 +109,26 @@ const Masonry = ({
   }, [items]);
 
   const grid = useMemo(() => {
-  if (!width) return [];
+    if (!width) return [];
 
-  // ✅ Only render 6 items if screen < 400px
-  const smallScreen = columns === 1;
-  const visibleItems = smallScreen ? items.slice(0, 6) : items;
+    const smallScreen = columns === 1;
+    const visibleItems = smallScreen ? items.slice(0, 6) : items;
 
-  const colHeights = new Array(columns).fill(0);
-  const columnWidth = (width - gap * (columns - 1)) / columns;
+    const colHeights = new Array(columns).fill(0);
+    const columnWidth = (width - gap * (columns - 1)) / columns;
 
-  return visibleItems.map((child) => {
-    const col = colHeights.indexOf(Math.min(...colHeights));
-    const x = col * (columnWidth + gap);
-    const itemWidth = child.width ?? columnWidth;
-    const height = child.height / 2;
-    const y = colHeights[col];
+    return visibleItems.map((child) => {
+      const col = colHeights.indexOf(Math.min(...colHeights));
+      const x = col * (columnWidth + gap);
+      const itemWidth = child.width ?? columnWidth;
+      const height = child.height / 2;
+      const y = colHeights[col];
 
-    colHeights[col] += height + gap;
+      colHeights[col] += height + gap;
 
-    return { ...child, x, y, w: itemWidth, h: height };
-  });
-}, [columns, items, width, gap]);
+      return { ...child, x, y, w: itemWidth, h: height };
+    });
+  }, [columns, items, width, gap]);
 
 
   const hasMounted = useRef(false);
@@ -211,7 +210,6 @@ const Masonry = ({
           data-key={item.id}
           className="absolute box-content p-2"
           style={{ willChange: "transform, width, height, opacity" }}
-          onClick={() => window.open(item.url, "_blank", "noopener")}
           onMouseEnter={(e) => handleMouseEnter(item.id, e.currentTarget)}
           onMouseLeave={(e) => handleMouseLeave(item.id, e.currentTarget)}
         >
@@ -224,6 +222,7 @@ const Masonry = ({
             )}
           </div>
         </div>
+
       ))}
     </div>
   );
