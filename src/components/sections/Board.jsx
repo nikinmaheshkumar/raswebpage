@@ -9,4 +9,3 @@ function Board() {
 }
 
 export default Board;
-// Compare this snippet from src/components/sections/Board.jsx:
