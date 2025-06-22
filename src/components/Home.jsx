@@ -120,7 +120,7 @@ function Home() {
             <div className="relative group">
               <div className="absolute -inset-4 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg blur-xl opacity-20 group-hover:opacity-30 transition-opacity duration-500"></div>
               <img
-                src="src/assets/Untitled.svg"
+                src="src/assets/Logo.svg"
                 alt="IEEE RAS Logo"
                 className="relative w-80 sm:w-96 h-auto mix-blend-screen filter drop-shadow-2xl transform hover:scale-105 transition-all duration-500"
               />

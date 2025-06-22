@@ -15,8 +15,8 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "../ui/carousel";
-import Reboot from "../../assets/reboot.svg";
-import Roboescape from "../../assets/roboescape.svg";
+import Reboot from "../../assets/events/reboot.svg";
+import Roboescape from "../../assets/events/roboescape.svg";
 
 function Events() {
   const DEFAULT_ITEMS = [
