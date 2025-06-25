@@ -17,6 +17,7 @@ import {
 } from "../ui/carousel";
 import Reboot from "../../assets/events/reboot.svg";
 import Roboescape from "../../assets/events/roboescape.svg";
+import Roboverse from "../../assets/events/roboverse.jpg"
 
 function Events() {
   const DEFAULT_ITEMS = [
@@ -43,9 +44,9 @@ function Events() {
       shortDescription:
         "Roboverse was a fast-paced ideathon where creativity met purpose. Teams brainstormed real-world solutions under mentor guidance, blending tech skills with big-picture thinking. The event fostered teamwork, innovation, and the drive to make meaningful impact, with top ideas earning accolades.",
       longDescription:
-        "Participants immersed themselves in the dynamic world of Roboverse, where every moment sparked creativity and innovation. They tackled thought-provoking challenges and brainstorming sessions, each unlocking new avenues of ideas and solutions. As they delved deeper into the ideathon, the problems presented grew more stimulating, fueling their curiosity and pushing their creative boundaries. Guided by mentors and driven by a shared vision, participants explored diverse perspectives, crafting ideas that had the potential to make a real-world impact.Amidst the excitement of collaborative ideation, participants remained focused, ready to pivot and adapt to new insights. Teams worked tirelessly, blending technical expertise with imaginative thinking, transforming raw concepts into actionable plans. Winning teams were celebrated with prestigious accolades, recognizing their innovative solutions and teamwork. Roboverse offers an extraordinary platform, seamlessly blending limitless imagination with moments of camaraderie, the joy of overcoming challenges, and the pride of creating meaningful change. It's more than an ideathon; it's a launchpad for visionaries to shape the future.",
+        "Participants immersed themselves in the dynamic world of Roboverse, where every moment sparked creativity and innovation. They tackled thought-provoking challenges and brainstorming sessions, unlocking new ideas and solutions. As the ideathon progressed, the problems grew more stimulating, pushing their curiosity and creative boundaries. Guided by mentors and united by a shared vision, teams explored diverse perspectives to craft ideas with real-world impact. Amidst the excitement of collaboration, participants stayed focused and adaptable, blending technical skills with imagination to turn raw concepts into actionable plans. Winning teams were recognized with prestigious accolades for their innovation and teamwork. Roboverse is more than an ideathon—it’s a launchpad for visionaries, blending imagination, camaraderie, and the joy of solving meaningful challenges.",
       id: 3,
-      src: "",
+      src: Roboverse,
     },
   ];
 
@@ -88,15 +89,15 @@ function Events() {
                     </CardContent>
                   )}
                   <CardHeader className="text-center px-6 flex-grow flex flex-col justify-center items-center">
-                    <CardTitle className={`text-white mb-4 text-center  ${!items.src ? 'text-3xl' : 'text-2xl'}`}>
+                    <CardTitle className="text-white mb-4 text-center text-2xl">
                       {items.title}
                     </CardTitle>
   
-                    <CardDescription className={`text-white/80 leading-relaxed whitespace-pre-wrap hidden md:block text-center ${!items.src ? 'text-lg' : 'text-base'}`}>
+                    <CardDescription className="text-white/80 leading-relaxed whitespace-pre-wrap hidden md:block text-center text-base">
                       {items.longDescription}
                     </CardDescription>
 
-                    <CardDescription className={`text-white/80 leading-relaxed whitespace-pre-wrap block md:hidden text-center ${!items.src ? 'text-xl' : 'text-md'}`}>
+                    <CardDescription className="text-white/80 leading-relaxed whitespace-pre-wrap block md:hidden text-center text-md">
                       {items.shortDescription}
                     </CardDescription>
                   </CardHeader>
