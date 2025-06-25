@@ -7,28 +7,18 @@ import { Github, ExternalLink } from "lucide-react"
 const items = [
   {
     id: 1,
-    title: "Stock Market Analysis using LSTM",
+    title: "Cracking the Creative Code: How Generative AI Is Reshaping Our Digital Future",
     description:
-      "Predicting stock prices is complex due to market volatility, but LSTM (Long Short-Term Memory) networks excel at capturing long-term dependencies in sequential data. By leveraging LSTMs, we can analyze historical stock prices, uncover patterns, and enhance prediction accuracy, making them a powerful tool for financial analysis.",
-    image: "src/assets/blogsProjects/lstm.png",
+      "Once considered science fiction, generative AI now powers tools like ChatGPT and DALL·E, transforming how we write, design, and code. This blog explores what GenAI is, how it works under the hood, real-world use cases across industries, and where this powerful technology is headed next.",
+    image: "src/assets/blogsProjects/GENAI.webp",
     type: "blog",
-    tags: ["Deep Learning", "Stock Prediction", "Python"],
-    link: "https://medium.com/@darrinbright/unraveling-stock-trends-using-lstm-67febf9608e0",
-    className: "col-span-1",
-  },
+    tags: ["Generative AI", "Deep Learning", "AI Tools", "Technology"],
+    link: "https://medium.com/@ieeeras/cracking-the-creative-code-how-generative-ai-is-reshaping-our-digital-future-2ae1919d451e", // Replace with actual link
+    className: "col-span-1"
+  }
+  ,
   {
     id: 2,
-    title: "Cracking the Medical Data Code: How Multilingual LLMs Unlock Information",
-    description:
-      "Multilingual LLMs are transforming global healthcare by breaking down language barriers. By processing diverse data formats—structured, unstructured, and image data—these models provide users with accurate medicinal insights in their preferred language, empowering better decision-making and improving access to essential healthcare information.",
-    image: "src/assets/blogsProjects/meds.png",
-    type: "blog",
-    tags: ["LLM", "Multilingual AI","AI in Medicine"],
-    link: "https://medium.com/@AmanChauhan786/cracking-the-medical-data-code-how-multilingual-llms-unlock-information-79e2a4f2d04c",
-    className: "col-span-1",
-  },
-  {
-    id: 3,
     title: "Editor.io",
     description:
       "Online code and markdown editor build with react.js. Online Editor which supports html, css, and js code with instant view of website. Online markdown editor for building README file which supports GFM, Custom Html tags with toolbar and instant preview.Both the editor supports auto save of work using Local Storage",
@@ -39,26 +29,38 @@ const items = [
     className: "col-span-1",
   },
   {
-    id: 4,
-    title: "Arduino Controlled Car",
+    id: 3,
+    title: "How AI Helps Businesses Understand Customers Better?",
     description:
-      "This project involves building an Obstacle-Avoiding Arduino Controlled Car. Using an Arduino Uno board, L298D motor driver, ultrasonic sensor, and DC motors, the car navigates around obstacles. The ultrasonic sensor detects obstacles, and based on the distance, the car adjusts its movements to avoid collisions. If an obstacle is detected, the car stops, moves backward, and then turns based on the available space. This project serves as an introductory lesson for electronics and Arduino enthusiasts, showcasing basic motor control and sensor integration.",
-    image: "src/assets/blogsProjects/arduino.png",
+      "From Netflix suggestions to emotionally intelligent chatbots, AI is revolutionizing how businesses understand and interact with customers. This blog dives into how technologies like NLP, machine learning, predictive analytics, and conversational AI are reshaping the future of customer experience, making it smarter, faster, and more human.",
+    image: "src/assets/blogsProjects/BUSIAI.webp", // Replace with actual image path
     type: "blog",
-    tags: ["Arduino", "Ultrasonic Sensor", "Obstacle Avoidance"],
-    link: "https://medium.com/@kejriwalkhyati/arduino-controlled-car-ab9aa46ad26a",
-    className: "col-span-1 md:col-span-2",
+    tags: ["AI", "Machine Learning", "Business"],
+    link: "https://medium.com/@ieeeras/how-ai-helps-businesses-understand-customers-better-76f54a3cf237",
+    className: "col-span-1"
   },
   {
-    id: 5,
-    title: "Bits-0f-C0de",
+    id: 1,
+    title: "How Do LLMS Write Stories?",
     description:
-    "My personal blog page build with Next.js and Tailwind Css which takes the content from makdown files and renders it using Next.js. Supports dark mode and easy to write blogs using markdown.",
-    image: "src/assets/blogsProjects/bitsOfCode.png",
+      "From writing heartfelt letters to imitating Shakespeare, LLMs like ChatGPT have transformed how we create content. This blog explores how these models use massive datasets and pattern recognition to generate human-like stories, and what that means for the future of creativity, storytelling, and AI’s role in it.", image: "src/assets/blogsProjects/LLMSTORY.webp",
+    type: "blog",
+    tags: ["AI", "LLMs", "ChatGPT"],
+    link: "https://medium.com/@ieeeras/how-do-llms-write-stories-de42dbadcf4d",
+    className: "col-span-1 md:col-span-2"
+  }
+  ,
+
+  {
+    id: 5,
+    title: "Ai For Social Good",
+    description:
+      "Using 'Natural Launguage Processing' for the detection of suicide-related posts and user's suicide ideation in cyberspace and thus helping in sucide prevention.",
+    image: "src/assets/blogsProjects/suicide.png",
     type: "project",
-    tags: ["Next.js", "Tailwind CSS", "Markdown"],
-    link: "https://github.com/soumyajit4419/Bits-0f-C0de",
-    className: "col-span-1 md:col-span-1",
+    tags: ["NLP", "Suicide Prevention", "Text Classification"],
+    link: "https://github.com/soumyajit4419/AI_For_Social_Good",
+    className: "col-span-1",
   },
   {
     id: 6,
@@ -67,21 +69,22 @@ const items = [
       "Used the plant disease dataset from Kaggle and trained a image classifer model using 'PyTorch' framework using CNN and Transfer Learning with 38 classes of various plant leaves. The model was successfully able to detect diseased and healthy leaves of 14 unique plants. I was able to achieve an accuracy of 98% by using Resnet34 pretrained model.",
     image: "src/assets/blogsProjects/leaf.png",
     type: "project",
-    tags: ["PyTorch", "CNN","Image Classification"],
+    tags: ["PyTorch", "CNN", "Image Classification"],
     link: "https://github.com/soumyajit4419/Plant_AI",
     className: "col-span-1",
   },
   {
     id: 7,
-    title: "Ai For Social Good",
+    title: "Quantum Computing: How it can revolutionize computing and the world",
     description:
-      "Using 'Natural Launguage Processing' for the detection of suicide-related posts and user's suicide ideation in cyberspace and thus helping in sucide prevention.",
-    image: "src/assets/blogsProjects/suicide.png",
-    type: "project",
-    tags: ["NLP", "Suicide Prevention","Text Classification"],
-    link: "https://github.com/soumyajit4419/AI_For_Social_Good",
-    className: "col-span-1",
-  },
+      "Quantum computing promises to transform industries from cryptography to climate science. This blog explores how qubits, superposition, and entanglement work, the practical challenges in building stable quantum systems, and how this technology could redefine the future of innovation, security, and problem-solving.",
+    image: "src/assets/blogsProjects/QUANTUM.webp", 
+    type: "blog",
+    tags: ["Quantum Computing", "Qubits", "Future Tech", "Cryptography"],
+    link: "https://medium.com/@ieeeras/quantum-computing-f0722fce51ac", 
+    className: "col-span-1"
+  }
+  ,
   {
     id: 8,
     title: "Face Recognition and Emotion Detection",
@@ -89,7 +92,7 @@ const items = [
       "Trained a CNN classifier using 'FER-2013 dataset' with Keras and tensorflow backened. The classifier sucessfully predicted the various types of emotions of human. And the highest accuracy obtained with the model was 60.1%. Then used Open-CV to detect the face in an image and then pass the face to the classifer to predict the emotion of a person.",
     image: "src/assets/blogsProjects/emotion.png",
     type: "project",
-    tags: ["OpenCV","Emotion Detection", "Computer Vision"],
+    tags: ["OpenCV", "Emotion Detection", "Computer Vision"],
     link: "https://github.com/soumyajit4419/Face_And_Emotion_Detection",
     className: "col-span-1",
   },
@@ -127,7 +130,7 @@ function BentoGridItem({ item }) {
           <img
             src={image || "/placeholder.svg"}
             alt={title}
-            className="object-cover w-full h-full transition-transform duration-300 group-hover:scale-105"
+            className="object-fit w-full h-full transition-transform duration-300 group-hover:scale-105"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-gray-900/60 to-transparent" />
         </div>
@@ -191,17 +194,7 @@ function Blogs() {
         </div>
         <div className="space-y-4">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            {items.slice(0, 3).map((item) => (
-              <BentoGridItem key={item.id} item={item} />
-            ))}
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            {[items[3], items[4]].map((item) => (
-              <BentoGridItem key={item.id} item={item} />
-            ))}
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            {items.slice(5, 8).map((item) => (
+            {items.map((item) => (
               <BentoGridItem key={item.id} item={item} />
             ))}
           </div>
