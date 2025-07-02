@@ -184,7 +184,7 @@ function BentoGridItem({ item }) {
 
 function Blogs() {
   return (
-    <div className="p-4 pt-0 md:p-8 md:pt-0">
+    <div className="px-4 pt-0 md:p-8 md:pt-0">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
           <h1 className="text-4xl sm:text-5xl font-bold text-white mb-4">
