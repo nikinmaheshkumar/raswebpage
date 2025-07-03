@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import axios from "axios";
 import { User, Mail, MessageCircle, Send } from "lucide-react";
 
 const Contact = () => {
@@ -21,23 +22,23 @@ const Contact = () => {
     setIsSubmitting(true);
 
     const payload = {
-      access_key: "caab7f18-ef6a-483c-bc9b-bf82a6250c81",
+      access_key: import.meta.env.VITE_API_KEY,
       ...formData,
     };
 
     try {
-      const res = await fetch("https://api.web3forms.com/submit", {
-        method: "POST",
-        headers: { "Content-Type": "application/json", Accept: "application/json" },
-        body: JSON.stringify(payload),
+      const response = await axios.post(import.meta.env.VITE_BASE_API_URL, payload, {
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
       });
 
-      const data = await res.json();
-      if (data.success) {
+      if (response.data.success) {
         showSuccessPopup();
         setFormData({ name: "", email: "", message: "" });
       } else {
-        console.error("Failed to send:", data.message);
+        console.error("Failed to send:", response.data.message);
       }
     } catch (error) {
       console.error("Network Error:", error);
@@ -83,13 +84,13 @@ const Contact = () => {
     </div>
   );
 
-
   return (
     <div className="w-full max-w-screen-xl mx-auto px-4 py-8">
       <h1 className="text-4xl sm:text-5xl font-semibold text-center mb-8 text-white">Contact Us</h1>
       <div
-        className={`fixed inset-0 flex items-center justify-center z-50 transition-all duration-500 ease-in-out ${showPopup ? "opacity-100 scale-100 pointer-events-auto" : "opacity-0 scale-95 pointer-events-none"
-          } bg-black/50 backdrop-blur-sm`}
+        className={`fixed inset-0 flex items-center justify-center z-50 transition-all duration-500 ease-in-out ${
+          showPopup ? "opacity-100 scale-100 pointer-events-auto" : "opacity-0 scale-95 pointer-events-none"
+        } bg-black/50 backdrop-blur-sm`}
       >
         <div className="bg-gradient-to-br from-green-500 to-emerald-600 text-white p-10 rounded-3xl shadow-2xl border border-green-400/30 max-w-md mx-4 transition-all duration-500 ease-out">
           <div className="text-center">
