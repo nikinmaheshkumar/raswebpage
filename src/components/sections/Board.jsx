@@ -6,16 +6,16 @@ const Board = () => {
   ];
 
   const boardMembers = [
-    { id: 'B1', name: 'Darrin Bright', title: 'Chairperson', image: 'src/assets/board/Darrin.png' },
-    { id: 'B2', name: 'Anvi Kapoor', title: 'Vice-Chairperson', image: 'src/assets/board/Anvi.png' },
-    { id: 'B3', name: 'Vasu Johri', title: 'Secretary', image: 'src/assets/board/Vasu.png' },
-    { id: 'B4', name: 'Sparsh Srivastava', title: 'Co-Secretary', image: 'src/assets/board/Sparsh.png' },
-    { id: 'B5', name: 'Khyati Kejriwal', title: 'Technical Head', image: 'src/assets/board/Khyati.png' },
-    { id: 'B6', name: 'Namratha K', title: 'Design Head', image: 'src/assets/board/faculty.png' },
-    { id: 'B7', name: 'Divyal Gupta', title: 'Finance Head', image: 'src/assets/board/Divyal.png' },
-    { id: 'B8', name: 'Ayushmaan Mishra', title: 'Events Head', image: 'src/assets/board/Ayushmaan.png' },
-    { id: 'B9', name: 'Kamya Mittal', title: 'Management Head', image: 'src/assets/board/Kamya.png' },
-    { id: 'B10', name: 'Swastika Mishra', title: 'HR Head', image: 'src/assets/board/faculty.png' }
+    { id: 'B1', name: 'Darrin Bright', title: 'Chairperson', image: 'src/assets/board/Darrin.webp' },
+    { id: 'B2', name: 'Anvi Kapoor', title: 'Vice-Chairperson', image: 'src/assets/board/Anvi.webp' },
+    { id: 'B3', name: 'Vasu Johri', title: 'Secretary', image: 'src/assets/board/Vasu.webp' },
+    { id: 'B4', name: 'Sparsh Srivastava', title: 'Co-Secretary', image: 'src/assets/board/Sparsh.webp' },
+    { id: 'B5', name: 'Khyati Kejriwal', title: 'Technical Head', image: 'src/assets/board/Khyati.webp' },
+    { id: 'B6', name: 'Namratha K', title: 'Design Head', image: 'src/assets/board/faculty.webp' },
+    { id: 'B7', name: 'Divyal Gupta', title: 'Finance Head', image: 'src/assets/board/Divyal.webp' },
+    { id: 'B8', name: 'Ayushmaan Mishra', title: 'Events Head', image: 'src/assets/board/Ayushmaan.webp' },
+    { id: 'B9', name: 'Kamya Mittal', title: 'Management Head', image: 'src/assets/board/Kamya.webp' },
+    { id: 'B10', name: 'Swastika Mishra', title: 'HR Head', image: 'src/assets/board/faculty.webp' }
   ];
 
   const seniorCore = [
@@ -60,15 +60,15 @@ const Board = () => {
             <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-center mb-6 text-purple-300 uppercase tracking-widest">
               Board & Leadership Module
             </h2>
-            <div className="flex flex-wrap justify-center gap-6">
+            <div className="flex flex-wrap justify-around gap-6 ">
               {boardMembers.map((member) => (
                 <div
                   key={member.id}
-                  className="w-[90%] sm:w-[45%] md:w-[30%] lg:w-[23%] bg-gradient-to-br from-indigo-800/40 to-purple-800/40 border-2 border-purple-500 rounded-lg py-5 px-0 text-center transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-purple-400/50 backdrop-blur-sm "
+                  className="w-[90%] sm:w-[45%] md:w-[30%] lg:w-[17%] bg-gradient-to-br from-indigo-800/40 to-purple-800/40 pt-4 rounded-lg shadow-2xl px-0 text-center  transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-violet-400/40 backdrop-blur-sm"
                 >
-                  <img src={member.image} alt={member.name} className="w-45 h-45 rounded-xl mb-4 mx-auto object-fit bg-gradient-to-br from-gray-300/40 to-gray-700/40" />
                   <div className="text-purple-100 text-base font-semibold truncate">{member.name}</div>
                   <div className="text-purple-200 text-sm mt-1 truncate">{member.title}</div>
+                  <img src={member.image} alt={member.name} className="w-45 h-45 rounded-xl mx-auto object-fit" />
                 </div>
               ))}
             </div>
