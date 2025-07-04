@@ -12,7 +12,7 @@ export default function Navbar() {
     { link: "#about", name: "About", icon: <Bot className="h-5 w-5" /> },
     { link: "#events", name: "Events", icon: <BarChart2 className="h-5 w-5" /> },
     { link: "#gallery", name: "Gallery", icon: <ImageIcon className="h-5 w-5" /> },
-    { link: "#blog", name: "Blogs & Projects", icon: <BookOpen className="h-5 w-5" /> },
+    { link: "#blog", name: "Projects & Blogs", icon: <BookOpen className="h-5 w-5" /> },
     { link: "#board", name: "Board", icon: <Users className="h-5 w-5" /> },
     { link: "#contact", name: "Contact us", icon: <MessageSquare className="h-5 w-5" /> },
   ];

@@ -6,33 +6,34 @@ const Board = () => {
   ];
 
   const boardMembers = [
-    { id: 'B1', name: 'Alex Chen', title: 'Chairman', image: 'src/assets/board/faculty.png' },
-    { id: 'B2', name: 'Sarah Kim', title: 'Vice Chair', image: 'src/assets/board/faculty.png' },
-    { id: 'B3', name: 'Mike Johnson', title: 'Secretary', image: 'src/assets/board/faculty.png' },
-    { id: 'B4', name: 'Emma Davis', title: 'Treasurer', image: 'src/assets/board/faculty.png' },
-    { id: 'B5', name: 'David Lee', title: 'Operations', image: 'src/assets/board/faculty.png' },
-    { id: 'B6', name: 'Lisa Wang', title: 'Strategy', image: 'src/assets/board/faculty.png' },
-    { id: 'B7', name: 'Tom Brown', title: 'Outreach', image: 'src/assets/board/faculty.png' },
-    { id: 'B8', name: 'Ana Garcia', title: 'Marketing', image: 'src/assets/board/faculty.png' },
-    { id: 'B9', name: 'James Wilson', title: 'Finance', image: 'src/assets/board/faculty.png' },
-    { id: 'B10', name: 'Rachel Green', title: 'Events', image: 'src/assets/board/faculty.png' }
+    { id: 'B1', name: 'Darrin Bright', title: 'Chairperson', image: 'src/assets/board/Darrin.png' },
+    { id: 'B2', name: 'Anvi Kapoor', title: 'Vice-Chairperson', image: 'src/assets/board/Anvi.png' },
+    { id: 'B3', name: 'Vasu Johri', title: 'Secretary', image: 'src/assets/board/Vasu.png' },
+    { id: 'B4', name: 'Sparsh Srivastava', title: 'Co-Secretary', image: 'src/assets/board/Sparsh.png' },
+    { id: 'B5', name: 'Khyati Kejriwal', title: 'Technical Head', image: 'src/assets/board/Khyati.png' },
+    { id: 'B6', name: 'Namratha K', title: 'Design Head', image: 'src/assets/board/faculty.png' },
+    { id: 'B7', name: 'Divyal Gupta', title: 'Finance Head', image: 'src/assets/board/Divyal.png' },
+    { id: 'B8', name: 'Ayushmaan Mishra', title: 'Events Head', image: 'src/assets/board/Ayushmaan.png' },
+    { id: 'B9', name: 'Kamya Mittal', title: 'Management Head', image: 'src/assets/board/Kamya.png' },
+    { id: 'B10', name: 'Swastika Mishra', title: 'HR Head', image: 'src/assets/board/faculty.png' }
   ];
 
   const seniorCore = [
-    { id: 'S1', name: 'Kevin Liu', title: 'AI Lead', image: 'src/assets/board/faculty.png' },
-    { id: 'S2', name: 'Maya Patel', title: 'Vision Lead', image: 'src/assets/board/faculty.png' },
-    { id: 'S3', name: 'Ryan Zhang', title: 'Motor Control', image: 'src/assets/board/faculty.png' },
-    { id: 'S4', name: 'Zoe Adams', title: 'Sensors', image: 'src/assets/board/faculty.png' },
-    { id: 'S5', name: 'Jack Thompson', title: 'Mechanical', image: 'src/assets/board/faculty.png' },
-    { id: 'S6', name: 'Priya Sharma', title: 'Electrical', image: 'src/assets/board/faculty.png' },
-    { id: 'S7', name: 'Carlos Rodriguez', title: 'Software', image: 'src/assets/board/faculty.png' },
-    { id: 'S8', name: 'Sophie Miller', title: 'Testing', image: 'src/assets/board/faculty.png' },
-    { id: 'S9', name: 'Nathan Park', title: 'Research', image: 'src/assets/board/faculty.png' },
-    { id: 'S10', name: 'Olivia Chang', title: 'Design', image: 'src/assets/board/faculty.png' },
-    { id: 'S11', name: 'Ethan Moore', title: 'Analytics', image: 'src/assets/board/faculty.png' },
-    { id: 'S12', name: 'Grace Kim', title: 'Operations', image: 'src/assets/board/faculty.png' },
-    { id: 'S13', name: 'Lucas Chen', title: 'Support', image: 'src/assets/board/faculty.png' }
-  ];
+  { id: 'S1', name: 'Anupam Hari', title: 'Embedded Lead', image: 'src/assets/board/faculty.png' },
+  { id: 'S2', name: 'Sharan', title: 'Events Lead', image: 'src/assets/board/faculty.png' },
+  { id: 'S3', name: 'Damini K', title: 'Events Lead', image: 'src/assets/board/faculty.png' },
+  { id: 'S4', name: 'Taher', title: 'Events Lead', image: 'src/assets/board/faculty.png' },
+  { id: 'S5', name: 'Dheeraj V P', title: 'Web Dev Lead', image: 'src/assets/board/faculty.png' },
+  { id: 'S6', name: 'Nikin', title: 'Web Dev Lead', image: 'src/assets/board/faculty.png' },
+  { id: 'S7', name: 'Harisarvesh', title: 'Finance Lead', image: 'src/assets/board/faculty.png' },
+  { id: 'S8', name: 'Karan Parekh', title: 'Finance Lead', image: 'src/assets/board/faculty.png' },
+  { id: 'S9', name: 'Harshvardhan', title: 'Marketing Lead', image: 'src/assets/board/faculty.png' },
+  { id: 'S10', name: 'Jacob Thomas', title: 'Design Lead', image: 'src/assets/board/faculty.png' },
+  { id: 'S11', name: 'Sanjushree', title: 'AI/Ml Lead', image: 'src/assets/board/faculty.png' },
+  { id: 'S12', name: 'Shrikar', title: 'Mechatronics Lead', image: 'src/assets/board/faculty.png' },
+  { id: 'S13', name: 'Miruthula', title: 'Editoral Lead', image: 'src/assets/board/faculty.png' }
+];
+
 
   return (
     <div className="min-h-screen font-mono p-4 sm:p-6 md:p-8 lg:p-10">
@@ -65,7 +66,7 @@ const Board = () => {
                   key={member.id}
                   className="w-[90%] sm:w-[45%] md:w-[30%] lg:w-[23%] bg-gradient-to-br from-indigo-800/40 to-purple-800/40 border-2 border-purple-500 rounded-lg py-5 px-0 text-center transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-purple-400/50 backdrop-blur-sm "
                 >
-                  <img src={member.image} alt={member.name} className="w-40 h-40 rounded-lg mb-4 mx-auto" />
+                  <img src={member.image} alt={member.name} className="w-45 h-45 rounded-xl mb-4 mx-auto object-fit bg-gradient-to-br from-gray-300/40 to-gray-700/40" />
                   <div className="text-purple-100 text-base font-semibold truncate">{member.name}</div>
                   <div className="text-purple-200 text-sm mt-1 truncate">{member.title}</div>
                 </div>
