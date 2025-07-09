@@ -61,7 +61,7 @@ export default function Navbar() {
         transition={{duration: 0.2}}
         className="hidden lg:flex fixed top-6 inset-x-0 px-8 py-2 rounded-full max-w-[80%] ml-auto mr-auto 
                     items-center justify-around space-x-3 
-                    bg-gray-100/15 backdrop-blur-md border border-gray-100/30 shadow-md z-50">
+                    bg-gray-100/15 backdrop-blur-md border border-gray-100/30 shadow-md z-50 scale-85">
         {navItems.map((item, idx) => (
           <a
             key={item.link}
