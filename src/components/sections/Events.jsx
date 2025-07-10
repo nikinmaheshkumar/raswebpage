@@ -15,9 +15,6 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "../ui/carousel";
-import Reboot from "../../assets/events/reboot.svg";
-import Roboescape from "../../assets/events/roboescape.svg";
-import Roboverse from "../../assets/events/roboverse.jpg"
 
 function Events() {
   const DEFAULT_ITEMS = [
@@ -28,7 +25,7 @@ function Events() {
       shortDescription:
         "REBOOT 3.0 is an intense 36-hour hackathon where innovation meets collaboration. Participants dive into nonstop coding, guided by expert talks and energizing mini-contests. The event wraps up with top projects judged by industry veterans, rewarding the most impactful ideas.",
       id: 1,
-      src: Reboot,
+      src: "/events/reboot.svg",
     },
     {
       title: "Roboescape",
@@ -37,7 +34,7 @@ function Events() {
       longDescription:
         "Participants immersed themselves in the world of Roboescape, where every moment was filled with excitement. They faced challenging puzzles and mysterious riddles, each one leading to the next level of fun. As they delved deeper, the puzzles became even more intriguing, keeping them engaged and eager for more.Amidst the thrill of the game, participants remained vigilant, ready for any surprises that might come their way. Winners were celebrated with exciting prizes, adding to the excitement of the event.Roboescape offers an extraordinary adventure, seamlessly blending limitless innovation with cherished moments shared among friends and the triumphs over challenges.",
       id: 2,
-      src: Roboescape,
+      src: "/events/roboescape.svg",
     },
     {
       title: "Roboverse",
@@ -46,7 +43,7 @@ function Events() {
       longDescription:
         "Participants immersed themselves in the dynamic world of Roboverse, where every moment sparked creativity and innovation. They tackled thought-provoking challenges and brainstorming sessions, unlocking new ideas and solutions. As the ideathon progressed, the problems grew more stimulating, pushing their curiosity and creative boundaries. Guided by mentors and united by a shared vision, teams explored diverse perspectives to craft ideas with real-world impact. Amidst the excitement of collaboration, participants stayed focused and adaptable, blending technical skills with imagination to turn raw concepts into actionable plans. Winning teams were recognized with prestigious accolades for their innovation and teamwork. Roboverse is more than an ideathon—it’s a launchpad for visionaries, blending imagination, camaraderie, and the joy of solving meaningful challenges.",
       id: 3,
-      src: Roboverse,
+      src: "/events/roboverse.jpg",
     },
   ];
 

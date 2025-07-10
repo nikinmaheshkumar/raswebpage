@@ -2,36 +2,36 @@ import React from 'react';
 
 const Board = () => {
   const faculty = [
-    { id: 'F1', name: 'Sumit Kumar Jindal', title: 'Faculty Advisor', image: 'src/assets/board/faculty.png' }
+    { id: 'F1', name: 'Sumit Kumar Jindal', title: 'Faculty Advisor', image: '/board/faculty.png' }
   ];
 
   const boardMembers = [
-    { id: 'B1', name: 'Darrin Bright', title: 'Chairperson', image: 'src/assets/board/Darrin.webp' },
-    { id: 'B2', name: 'Anvi Kapoor', title: 'Vice-Chairperson', image: 'src/assets/board/Anvi.webp' },
-    { id: 'B3', name: 'Vasu Johri', title: 'Secretary', image: 'src/assets/board/Vasu.webp' },
-    { id: 'B4', name: 'Sparsh Srivastava', title: 'Co-Secretary', image: 'src/assets/board/Sparsh.webp' },
-    { id: 'B5', name: 'Khyati Kejriwal', title: 'Technical Head', image: 'src/assets/board/Khyati.webp' },
-    { id: 'B6', name: 'Namratha K', title: 'Design Head', image: 'src/assets/board/Namrata.webp' },
-    { id: 'B7', name: 'Divyal Gupta', title: 'Finance Head', image: 'src/assets/board/Divyal.webp' },
-    { id: 'B8', name: 'Ayushmaan Mishra', title: 'Events Head', image: 'src/assets/board/Ayushmaan.webp' },
-    { id: 'B9', name: 'Kamya Mittal', title: 'Management Head', image: 'src/assets/board/Kamya.webp' },
-    { id: 'B10', name: 'Swastika Mishra', title: 'HR Head', image: 'src/assets/board/Swastika.webp' }
+    { id: 'B1', name: 'Darrin Bright', title: 'Chairperson', image: '/board/Darrin.webp' },
+    { id: 'B2', name: 'Anvi Kapoor', title: 'Vice-Chairperson', image: '/board/Anvi.webp' },
+    { id: 'B3', name: 'Vasu Johri', title: 'Secretary', image: '/board/Vasu.webp' },
+    { id: 'B4', name: 'Sparsh Srivastava', title: 'Co-Secretary', image: '/board/Sparsh.webp' },
+    { id: 'B5', name: 'Khyati Kejriwal', title: 'Technical Head', image: '/board/Khyati.webp' },
+    { id: 'B6', name: 'Namratha K', title: 'Design Head', image: '/board/Namrata.webp' },
+    { id: 'B7', name: 'Divyal Gupta', title: 'Finance Head', image: '/board/Divyal.webp' },
+    { id: 'B8', name: 'Ayushmaan Mishra', title: 'Events Head', image: '/board/Ayushmaan.webp' },
+    { id: 'B9', name: 'Kamya Mittal', title: 'Management Head', image: '/board/Kamya.webp' },
+    { id: 'B10', name: 'Swastika Mishra', title: 'HR Head', image: '/board/Swastika.webp' }
   ];
 
 //   const seniorCore = [
-//   { id: 'S1', name: 'Anupam Hari', title: 'Embedded Lead', image: 'src/assets/board/Anupam.png' },
-//   { id: 'S2', name: 'Sharan', title: 'Events Lead', image: 'src/assets/board/Sharan.png' },
-//   { id: 'S3', name: 'Damini K', title: 'Events Lead', image: 'src/assets/board/Damini.png' },
-//   { id: 'S4', name: 'Taher', title: 'Events Lead', image: 'src/assets/board/Taher.png' },
-//   { id: 'S5', name: 'Dheeraj V P', title: 'Web Dev Lead', image: 'src/assets/board/Dheeraj.png' },
-//   { id: 'S6', name: 'Nikin', title: 'Web Dev Lead', image: 'src/assets/board/Nikin.webp' },
-//   { id: 'S7', name: 'Harisarvesh', title: 'Finance Lead', image: 'src/assets/board/Harisarvesh.png' },
-//   { id: 'S8', name: 'Karan Parekh', title: 'Finance Lead', image: 'src/assets/board/Karan.png' },
-//   { id: 'S9', name: 'Harshvardhan', title: 'Marketing Lead', image: 'src/assets/board/Harshvardhan.png' },
-//   { id: 'S10', name: 'Jacob Thomas', title: 'Design Lead', image: 'src/assets/board/Jacob.png' },
-//   { id: 'S11', name: 'Sanjushree', title: 'AI/Ml Lead', image: 'src/assets/board/Sanjusree.webp' },
-//   { id: 'S12', name: 'Shrikar', title: 'Mechatronics Lead', image: 'src/assets/board/Shrikar.png' },
-//   { id: 'S13', name: 'Miruthula', title: 'Editoral Lead', image: 'src/assets/board/Miruthula.png' }
+//   { id: 'S1', name: 'Anupam Hari', title: 'Embedded Lead', image: '/board/Anupam.png' },
+//   { id: 'S2', name: 'Sharan', title: 'Events Lead', image: '/board/Sharan.png' },
+//   { id: 'S3', name: 'Damini K', title: 'Events Lead', image: '/board/Damini.png' },
+//   { id: 'S4', name: 'Taher', title: 'Events Lead', image: '/board/Taher.png' },
+//   { id: 'S5', name: 'Dheeraj V P', title: 'Web Dev Lead', image: '/board/Dheeraj.png' },
+//   { id: 'S6', name: 'Nikin', title: 'Web Dev Lead', image: '/board/Nikin.webp' },
+//   { id: 'S7', name: 'Harisarvesh', title: 'Finance Lead', image: '/board/Harisarvesh.png' },
+//   { id: 'S8', name: 'Karan Parekh', title: 'Finance Lead', image: '/board/Karan.png' },
+//   { id: 'S9', name: 'Harshvardhan', title: 'Marketing Lead', image: '/board/Harshvardhan.png' },
+//   { id: 'S10', name: 'Jacob Thomas', title: 'Design Lead', image: '/board/Jacob.png' },
+//   { id: 'S11', name: 'Sanjushree', title: 'AI/Ml Lead', image: '/board/Sanjusree.webp' },
+//   { id: 'S12', name: 'Shrikar', title: 'Mechatronics Lead', image: '/board/Shrikar.png' },
+//   { id: 'S13', name: 'Miruthula', title: 'Editoral Lead', image: '/board/Miruthula.png' }
 // ];
 
 

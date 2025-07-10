@@ -10,7 +10,7 @@ const items = [
     title: "Cracking the Creative Code: How Generative AI Is Reshaping Our Digital Future",
     description:
       "Once considered science fiction, generative AI now powers tools like ChatGPT and DALL·E, transforming how we write, design, and code. This blog explores what GenAI is, how it works under the hood, real-world use cases across industries, and where this powerful technology is headed next.",
-    image: "src/assets/blogsProjects/GENAI.webp",
+    image: "/blogsProjects/GENAI.webp",
     type: "blog",
     tags: ["Generative AI", "Deep Learning", "AI Tools", "Technology"],
     link: "https://medium.com/@ieeeras/cracking-the-creative-code-how-generative-ai-is-reshaping-our-digital-future-2ae1919d451e", // Replace with actual link
@@ -22,7 +22,7 @@ const items = [
     title: "Editor.io",
     description:
       "Online code and markdown editor build with react.js. Online Editor which supports html, css, and js code with instant view of website. Online markdown editor for building README file which supports GFM, Custom Html tags with toolbar and instant preview.Both the editor supports auto save of work using Local Storage",
-    image: "src/assets/blogsProjects/codeEditor.png",
+    image: "/blogsProjects/codeEditor.png",
     type: "project",
     tags: ["React", "Markdown", "Code Editor"],
     link: "https://github.com/soumyajit4419/Editor.io",
@@ -33,7 +33,7 @@ const items = [
     title: "How AI Helps Businesses Understand Customers Better?",
     description:
       "From Netflix suggestions to emotionally intelligent chatbots, AI is revolutionizing how businesses understand and interact with customers. This blog dives into how technologies like NLP, machine learning, predictive analytics, and conversational AI are reshaping the future of customer experience, making it smarter, faster, and more human.",
-    image: "src/assets/blogsProjects/BUSIAI.webp", // Replace with actual image path
+    image: "/blogsProjects/BUSIAI.webp", // Replace with actual image path
     type: "blog",
     tags: ["AI", "Machine Learning", "Business"],
     link: "https://medium.com/@ieeeras/how-ai-helps-businesses-understand-customers-better-76f54a3cf237",
@@ -43,7 +43,7 @@ const items = [
     id: 1,
     title: "How Do LLMS Write Stories?",
     description:
-      "From writing heartfelt letters to imitating Shakespeare, LLMs like ChatGPT have transformed how we create content. This blog explores how these models use massive datasets and pattern recognition to generate human-like stories, and what that means for the future of creativity, storytelling, and AI’s role in it.", image: "src/assets/blogsProjects/LLMSTORY.webp",
+      "From writing heartfelt letters to imitating Shakespeare, LLMs like ChatGPT have transformed how we create content. This blog explores how these models use massive datasets and pattern recognition to generate human-like stories, and what that means for the future of creativity, storytelling, and AI’s role in it.", image: "/blogsProjects/LLMSTORY.webp",
     type: "blog",
     tags: ["AI", "LLMs", "ChatGPT"],
     link: "https://medium.com/@ieeeras/how-do-llms-write-stories-de42dbadcf4d",
@@ -56,7 +56,7 @@ const items = [
     title: "Ai For Social Good",
     description:
       "Using 'Natural Launguage Processing' for the detection of suicide-related posts and user's suicide ideation in cyberspace and thus helping in sucide prevention.",
-    image: "src/assets/blogsProjects/suicide.png",
+    image: "/blogsProjects/suicide.png",
     type: "project",
     tags: ["NLP", "Suicide Prevention", "Text Classification"],
     link: "https://github.com/soumyajit4419/AI_For_Social_Good",
@@ -67,7 +67,7 @@ const items = [
     title: "Plant AI",
     description:
       "Used the plant disease dataset from Kaggle and trained a image classifer model using 'PyTorch' framework using CNN and Transfer Learning with 38 classes of various plant leaves. The model was successfully able to detect diseased and healthy leaves of 14 unique plants. I was able to achieve an accuracy of 98% by using Resnet34 pretrained model.",
-    image: "src/assets/blogsProjects/leaf.png",
+    image: "/blogsProjects/leaf.png",
     type: "project",
     tags: ["PyTorch", "CNN", "Image Classification"],
     link: "https://github.com/soumyajit4419/Plant_AI",
@@ -78,7 +78,7 @@ const items = [
     title: "Quantum Computing: How it can revolutionize computing and the world",
     description:
       "Quantum computing promises to transform industries from cryptography to climate science. This blog explores how qubits, superposition, and entanglement work, the practical challenges in building stable quantum systems, and how this technology could redefine the future of innovation, security, and problem-solving.",
-    image: "src/assets/blogsProjects/QUANTUM.webp", 
+    image: "/blogsProjects/QUANTUM.webp", 
     type: "blog",
     tags: ["Quantum Computing", "Qubits", "Future Tech", "Cryptography"],
     link: "https://medium.com/@ieeeras/quantum-computing-f0722fce51ac", 
@@ -90,7 +90,7 @@ const items = [
     title: "Face Recognition and Emotion Detection",
     description:
       "Trained a CNN classifier using 'FER-2013 dataset' with Keras and tensorflow backened. The classifier sucessfully predicted the various types of emotions of human. And the highest accuracy obtained with the model was 60.1%. Then used Open-CV to detect the face in an image and then pass the face to the classifer to predict the emotion of a person.",
-    image: "src/assets/blogsProjects/emotion.png",
+    image: "/blogsProjects/emotion.png",
     type: "project",
     tags: ["OpenCV", "Emotion Detection", "Computer Vision"],
     link: "https://github.com/soumyajit4419/Face_And_Emotion_Detection",

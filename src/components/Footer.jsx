@@ -10,7 +10,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-10 items-start justify-between">
           <div className="space-y-6 flex flex-col items-center md:items-start text-center md:text-left">
             <div className="flex items-center gap-4">
-              <img src="src/assets/ras-footer-Photoroom.png" alt="footer logo" className="w-20 h-20 rounded-2xl flex items-center justify-center shadow-2xl"/>
+              <img src="/ras-footer-Photoroom.png" alt="footer logo" className="w-20 h-20 rounded-2xl flex items-center justify-center shadow-2xl"/>
               <div>
                 <h3 className="text-2xl font-bold bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent">
                   IEEE RAS
