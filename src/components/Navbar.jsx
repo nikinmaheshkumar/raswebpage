@@ -102,8 +102,8 @@ export default function Navbar() {
         initial={{opacity: 1, y: 100}}
         animate={{opacity: visible ? 1 : 0, y: visible ? 0 : 100}}
         transition={{duration: 0.2}}
-        className="flex sm:hidden fixed bottom-4 inset-x-0 px-2 py-2 rounded-2xl w-screen mx-auto
-                    items-center justify-around space-x-2 scale-75
+        className="flex sm:hidden fixed bottom-4 inset-x-0 px-2 py-2 rounded-2xl max-w-[97%] mx-auto
+                    items-center justify-around space-x-2
                     bg-gray-100/15 backdrop-blur-md border border-gray-100/30 shadow-md z-50">
         {navItems.map((item, idx) => (
           <a

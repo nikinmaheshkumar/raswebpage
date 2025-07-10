@@ -180,17 +180,15 @@ function Home() {
 
           {/* Right Section */}
           <div className="flex items-center justify-center lg:w-1/2 mt-12 lg:mt-0">
-            <div className="relative">
               <model-viewer
                 src="/models/robot_playground.glb"
                 alt="IEEE RAS Robot"
                 autoplay
                 animation-name="Wave"
                 shadow-intensity="1"
-                className="w-[90%] h-96 md:h-[500px]"
+                className="w-full h-96 md:h-[500px]"
                 style={{ width: "500px", height: "500px", background: "transparent" }}>
               </model-viewer>
-            </div>
           </div>
         </div>
       </div>
