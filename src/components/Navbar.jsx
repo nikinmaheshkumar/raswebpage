@@ -12,7 +12,7 @@ export default function Navbar() {
     { link: "#about", name: "About", icon: <Bot className="h-5 w-5" /> },
     { link: "#events", name: "Events", icon: <BarChart2 className="h-5 w-5" /> },
     { link: "#gallery", name: "Gallery", icon: <ImageIcon className="h-5 w-5" /> },
-    { link: "#blog", name: "Blogs & Projects", icon: <BookOpen className="h-5 w-5" /> },
+    { link: "#blog", name: "Projects & Blogs", icon: <BookOpen className="h-5 w-5" /> },
     { link: "#board", name: "Board", icon: <Users className="h-5 w-5" /> },
     { link: "#contact", name: "Contact us", icon: <MessageSquare className="h-5 w-5" /> },
   ];
@@ -61,7 +61,7 @@ export default function Navbar() {
         transition={{duration: 0.2}}
         className="hidden lg:flex fixed top-6 inset-x-0 px-8 py-2 rounded-full max-w-[80%] ml-auto mr-auto 
                     items-center justify-around space-x-3 
-                    bg-gray-100/15 backdrop-blur-md border border-gray-100/30 shadow-md z-50">
+                    bg-gray-100/15 backdrop-blur-md border border-gray-100/30 shadow-md z-50 scale-85">
         {navItems.map((item, idx) => (
           <a
             key={item.link}
@@ -102,8 +102,8 @@ export default function Navbar() {
         initial={{opacity: 1, y: 100}}
         animate={{opacity: visible ? 1 : 0, y: visible ? 0 : 100}}
         transition={{duration: 0.2}}
-        className="flex sm:hidden fixed bottom-4 inset-x-0 px-2 py-2 rounded-2xl max-w-[98%] ml-auto mr-auto 
-                    items-center justify-around space-x-2 
+        className="flex sm:hidden fixed bottom-4 inset-x-0 px-2 py-2 rounded-2xl max-w-[97%] mx-auto
+                    items-center justify-around space-x-2
                     bg-gray-100/15 backdrop-blur-md border border-gray-100/30 shadow-md z-50">
         {navItems.map((item, idx) => (
           <a

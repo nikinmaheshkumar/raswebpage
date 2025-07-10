@@ -34,22 +34,22 @@ function Gallery() {
     },
     {
       id: "7",
-      img: "src/assets/gallery/7.jpg",
+      img: "/gallery/7.jpg",
       height: 500,
     },
     {
       id: "8",
-      img: "src/assets/gallery/8.jpg",
+      img: "/gallery/8.jpg",
       height: 500,
     },
     {
       id: "9",
-      img: "src/assets/gallery/9.jpg",
+      img: "/gallery/9.jpg",
       height: 350,
     },
     {
       id: "10",
-      img: "src/assets/gallery/10.jpg",
+      img: "/gallery/10.jpg",
       height: 300,
     },
   ];

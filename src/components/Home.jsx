@@ -120,7 +120,7 @@ function Home() {
             <div className="relative group">
               <div className="absolute -inset-4 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg blur-xl opacity-20 group-hover:opacity-30 transition-opacity duration-500"></div>
               <img
-                src="src/assets/Logo.svg"
+                src="/Logo.svg"
                 alt="IEEE RAS Logo"
                 className="relative w-80 sm:w-96 h-auto mix-blend-screen filter drop-shadow-2xl transform hover:scale-105 transition-all duration-500"
               />
@@ -180,9 +180,8 @@ function Home() {
 
           {/* Right Section */}
           <div className="flex items-center justify-center lg:w-1/2 mt-12 lg:mt-0">
-            <div className="relative">
               <model-viewer
-                src="src/models/robot_playground.glb"
+                src="/models/robot_playground.glb"
                 alt="IEEE RAS Robot"
                 autoplay
                 animation-name="Wave"
@@ -190,7 +189,6 @@ function Home() {
                 className="w-full h-96 md:h-[500px]"
                 style={{ width: "500px", height: "500px", background: "transparent" }}>
               </model-viewer>
-            </div>
           </div>
         </div>
       </div>
